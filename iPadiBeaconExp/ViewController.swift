@@ -44,6 +44,7 @@ extension ViewController: CBPeripheralManagerDelegate {
         case .poweredOn:
             print("power on")
             peripheralManager.startAdvertising(beaconData)
+            print("#### start broadcasting ...")
         case .poweredOff:
             print("power off")
         case .resetting:
