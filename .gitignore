@@ -1,0 +1,12 @@
+xcuserdata
+Envoy/AutomatorTests/output
+build/
+Pods/
+.DS_Store
+.ruby-version
+*.mobileprovision
+*.zip
+*.ipa
+fastlane/report.xml
+fastlane/screenshots
+.env
