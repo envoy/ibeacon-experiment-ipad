@@ -24,6 +24,8 @@ class NameViewController: UIViewController {
     }
     
     @IBAction func signinButtonTapped(_ sender: Any) {
+        signinButton.isEnabled = false
+
         var request = URLRequest(url: Utils.apiURL.appendingPathComponent("sign-ins"))
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
@@ -39,8 +41,11 @@ class NameViewController: UIViewController {
                 print("Failed to sign-in, code=\((resp as! HTTPURLResponse).statusCode)")
                 return
             }
-            print("sign-in")
+            print("signed-in as \(self.userID)")
             // TODO: pop back to original page
+            DispatchQueue.main.async {
+                self.navigationController?.popViewController(animated: true)
+            }
         }
         task.resume()
     }
