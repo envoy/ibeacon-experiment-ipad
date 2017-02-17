@@ -48,7 +48,10 @@ class ViewController: UIViewController {
                 print("Failed to load user list")
                 return
             }
-            let users = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments)
+            let usersList = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [[String: Any]]
+            let users = usersList.map { dict in
+                return User(id: dict["id"]! as! Int, name: dict["name"]! as! String)
+            }
             print("Loaded user list \(users)")
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "showNames", sender: users)
@@ -69,7 +72,7 @@ class ViewController: UIViewController {
         switch segue.identifier {
         case .some("showNames"):
             let destVC = segue.destination as! NameViewController
-            destVC.users = sender as! [String]
+            destVC.users = sender as! [User]
         default:
             break
         }

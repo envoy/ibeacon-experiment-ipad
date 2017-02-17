@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-727" y="137"/>
         </scene>
-        <!--Envoy 3.0-->
+        <!--✨ Envoy 3.0 ✨-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iPadiBeaconExp" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,9 +39,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdL-L7-f39">
-                                <rect key="frame" x="251" y="463" width="266" height="98"/>
+                                <rect key="frame" x="204" y="463" width="361" height="98"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="72"/>
-                                <state key="normal" title="I'm here!"/>
+                                <state key="normal" title="👋 I'm here!"/>
                                 <connections>
                                     <action selector="signinButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8i8-vK-pnN"/>
                                 </connections>
@@ -50,7 +50,7 @@
                                 <rect key="frame" x="110" y="124" width="548" height="115"/>
                                 <string key="text">Not Envoy3.0, just kidding 👻
 For Envoy internal experiments only,
-just ignore this if you are a visitor</string>
+ ignore this if you are a visitor</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -77,7 +77,7 @@ just ignore this if you are a visitor</string>
                             <constraint firstItem="LdL-L7-f39" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yVz-nS-4FU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Envoy 3.0" id="8pU-rK-dqb"/>
+                    <navigationItem key="navigationItem" title="✨ Envoy 3.0 ✨" id="8pU-rK-dqb"/>
                     <connections>
                         <outlet property="activityIndicator" destination="x6k-af-63Z" id="g3h-S5-YkE"/>
                         <outlet property="signinButton" destination="LdL-L7-f39" id="w07-kG-tAh"/>
@@ -102,19 +102,49 @@ just ignore this if you are a visitor</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cUe-SK-XP2">
-                                <rect key="frame" x="40" y="84" width="688" height="920"/>
+                                <rect key="frame" x="60" y="123" width="648" height="743"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="NameCell" id="bJT-83-b14">
+                                        <rect key="frame" x="0.0" y="28" width="648" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bJT-83-b14" id="56s-Q6-GgJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="648" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nln-LX-Yd6">
+                                <rect key="frame" x="232" y="896" width="305" height="98"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                <state key="normal" title="Sign in ✍️"/>
+                                <connections>
+                                    <action selector="signinButtonTapped:" destination="nFz-mE-g7X" eventType="touchUpInside" id="YmE-9V-ta0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select your name below and tap sign-in button" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uEB-jw-XPX">
+                                <rect key="frame" x="40" y="84" width="688" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="twl-Po-AaN" firstAttribute="top" secondItem="cUe-SK-XP2" secondAttribute="bottom" constant="20" id="K9F-Yg-Hyl"/>
-                            <constraint firstItem="cUe-SK-XP2" firstAttribute="top" secondItem="OGE-wy-vzo" secondAttribute="bottom" constant="20" id="LXS-j7-Lgw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cUe-SK-XP2" secondAttribute="trailing" constant="20" id="aWl-nm-ufc"/>
-                            <constraint firstItem="cUe-SK-XP2" firstAttribute="leading" secondItem="yUi-ek-ZHj" secondAttribute="leadingMargin" constant="20" id="p6p-v2-e3v"/>
+                            <constraint firstItem="twl-Po-AaN" firstAttribute="top" secondItem="Nln-LX-Yd6" secondAttribute="bottom" constant="30" id="D6O-fy-cAd"/>
+                            <constraint firstItem="uEB-jw-XPX" firstAttribute="leading" secondItem="yUi-ek-ZHj" secondAttribute="leadingMargin" constant="20" id="Fmv-7V-Kn0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uEB-jw-XPX" secondAttribute="trailing" constant="20" id="HMB-yp-RnC"/>
+                            <constraint firstItem="uEB-jw-XPX" firstAttribute="top" secondItem="OGE-wy-vzo" secondAttribute="bottom" constant="20" id="ThA-Ha-Wl4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cUe-SK-XP2" secondAttribute="trailing" constant="40" id="aWl-nm-ufc"/>
+                            <constraint firstItem="cUe-SK-XP2" firstAttribute="top" secondItem="uEB-jw-XPX" secondAttribute="bottom" constant="10" id="m6G-Ah-cgk"/>
+                            <constraint firstItem="cUe-SK-XP2" firstAttribute="leading" secondItem="yUi-ek-ZHj" secondAttribute="leadingMargin" constant="40" id="p6p-v2-e3v"/>
+                            <constraint firstItem="Nln-LX-Yd6" firstAttribute="top" secondItem="cUe-SK-XP2" secondAttribute="bottom" constant="30" id="pon-Qj-sJu"/>
+                            <constraint firstItem="Nln-LX-Yd6" firstAttribute="centerX" secondItem="yUi-ek-ZHj" secondAttribute="centerX" id="qGr-2H-cKh"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="signinButton" destination="Nln-LX-Yd6" id="wur-6E-RRt"/>
                         <outlet property="tableView" destination="cUe-SK-XP2" id="5mE-DD-1T0"/>
                     </connections>
                 </viewController>
