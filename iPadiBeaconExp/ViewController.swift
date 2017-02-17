@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         beaconData = (region.peripheralData(withMeasuredPower: nil) as NSDictionary) as! [String: Any]
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
         activityIndicator.stopAnimating()
+
+        registerUser()
     }
 
     @IBAction func signinButtonTapped(_ sender: Any) {
@@ -76,6 +78,36 @@ class ViewController: UIViewController {
         default:
             break
         }
+    }
+
+    func registerUser() {
+        let deviceModel = UIDevice.current.modelCode
+        let osVersion = UIDevice.current.systemVersion
+        let userName = "ipad"
+        var request = URLRequest(url: Utils.apiURL.appendingPathComponent("users"))
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        request.httpBody = Utils.urlEncode(dict: [
+            "device_model": deviceModel,
+            "os_version": osVersion,
+            "username": userName
+        ]).data(using: .utf8)
+        let task = URLSession.shared.dataTask(with: request) { (data, resp, error) in
+            if let error = error {
+                print("Failed to sign up, error=\(error)")
+                return
+            }
+            guard (resp as! HTTPURLResponse).statusCode == 200 else {
+                print("Failed to create user, code=\((resp as! HTTPURLResponse).statusCode)")
+                return
+            }
+            let userID = String(data: data!, encoding: .utf8)
+            print("Created user \(userID)")
+            let defaults = UserDefaults.standard
+            defaults.set(userID, forKey: "user_id")
+            defaults.synchronize()
+        }
+        task.resume()
     }
 
 }
