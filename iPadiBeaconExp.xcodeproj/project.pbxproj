@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D83A60111E567A8700FCB41B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A60101E567A8700FCB41B /* Utils.swift */; };
+		D83A60131E567E8300FCB41B /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A60121E567E8300FCB41B /* NameViewController.swift */; };
 		D8D2F5321E4A691C00835D01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D2F5311E4A691C00835D01 /* AppDelegate.swift */; };
 		D8D2F5341E4A691C00835D01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D2F5331E4A691C00835D01 /* ViewController.swift */; };
 		D8D2F5371E4A691C00835D01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D2F5351E4A691C00835D01 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D83A60101E567A8700FCB41B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D83A60121E567E8300FCB41B /* NameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		D8D2F52E1E4A691C00835D01 /* iPadiBeaconExp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPadiBeaconExp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D2F5311E4A691C00835D01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8D2F5331E4A691C00835D01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 			children = (
 				D8D2F5311E4A691C00835D01 /* AppDelegate.swift */,
 				D8D2F5331E4A691C00835D01 /* ViewController.swift */,
+				D83A60121E567E8300FCB41B /* NameViewController.swift */,
+				D83A60101E567A8700FCB41B /* Utils.swift */,
 				D8D2F5351E4A691C00835D01 /* Main.storyboard */,
 				D8D2F5381E4A691C00835D01 /* Assets.xcassets */,
 				D8D2F53A1E4A691C00835D01 /* LaunchScreen.storyboard */,
@@ -139,6 +145,8 @@
 			files = (
 				D8D2F5341E4A691C00835D01 /* ViewController.swift in Sources */,
 				D8D2F5321E4A691C00835D01 /* AppDelegate.swift in Sources */,
+				D83A60111E567A8700FCB41B /* Utils.swift in Sources */,
+				D83A60131E567E8300FCB41B /* NameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +310,7 @@
 				D8D2F5421E4A691C00835D01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

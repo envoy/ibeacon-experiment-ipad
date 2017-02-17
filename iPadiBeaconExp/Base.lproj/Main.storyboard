@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3X4-p4-vfg">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="LiD-4k-7Uk">
+            <objects>
+                <navigationController id="3X4-p4-vfg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AbY-Z9-14Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bhH-Yp-6ue"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PkA-AZ-J0m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-727" y="137"/>
+        </scene>
+        <!--Envoy 3.0-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iPadiBeaconExp" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,30 +35,92 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdL-L7-f39">
-                                <rect key="frame" x="93.5" y="301.5" width="187" height="63"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <state key="normal" title="Broadcast"/>
+                                <rect key="frame" x="251" y="463" width="266" height="98"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                <state key="normal" title="I'm here!"/>
                                 <connections>
-                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Dz-nD-WhJ"/>
+                                    <action selector="signinButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8i8-vK-pnN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4P0-Du-AWY">
+                                <rect key="frame" x="110" y="124" width="548" height="115"/>
+                                <string key="text">Not Envoy3.0, just kidding 👻
+For Envoy internal experiments only,
+just ignore this if you are a visitor</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Init" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWj-4w-D8M">
+                                <rect key="frame" x="372" y="963" width="24" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="x6k-af-63Z">
+                                <rect key="frame" x="374" y="502" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="4P0-Du-AWY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="10M-ZM-toQ"/>
+                            <constraint firstItem="4P0-Du-AWY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Iv-l8-odm"/>
                             <constraint firstItem="LdL-L7-f39" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9zn-Mn-D2f"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BWj-4w-D8M" secondAttribute="bottom" constant="40" id="BwE-La-gAd"/>
+                            <constraint firstItem="BWj-4w-D8M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T9R-aq-Ohp"/>
+                            <constraint firstItem="x6k-af-63Z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cDc-Po-1ZC"/>
+                            <constraint firstItem="x6k-af-63Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="of4-wp-UAz"/>
                             <constraint firstItem="LdL-L7-f39" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yVz-nS-4FU"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Envoy 3.0" id="8pU-rK-dqb"/>
                     <connections>
-                        <outlet property="button" destination="LdL-L7-f39" id="9QZ-7Z-CFI"/>
+                        <outlet property="activityIndicator" destination="x6k-af-63Z" id="g3h-S5-YkE"/>
+                        <outlet property="signinButton" destination="LdL-L7-f39" id="w07-kG-tAh"/>
+                        <outlet property="statusLabel" destination="BWj-4w-D8M" id="wPk-ue-ljS"/>
+                        <segue destination="nFz-mE-g7X" kind="show" identifier="showNames" id="zug-Yz-roh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.71875" y="137.109375"/>
+        </scene>
+        <!--Name View Controller-->
+        <scene sceneID="9CI-03-B1d">
+            <objects>
+                <viewController id="nFz-mE-g7X" customClass="NameViewController" customModule="iPadiBeaconExp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OGE-wy-vzo"/>
+                        <viewControllerLayoutGuide type="bottom" id="twl-Po-AaN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yUi-ek-ZHj">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cUe-SK-XP2">
+                                <rect key="frame" x="40" y="84" width="688" height="920"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="twl-Po-AaN" firstAttribute="top" secondItem="cUe-SK-XP2" secondAttribute="bottom" constant="20" id="K9F-Yg-Hyl"/>
+                            <constraint firstItem="cUe-SK-XP2" firstAttribute="top" secondItem="OGE-wy-vzo" secondAttribute="bottom" constant="20" id="LXS-j7-Lgw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cUe-SK-XP2" secondAttribute="trailing" constant="20" id="aWl-nm-ufc"/>
+                            <constraint firstItem="cUe-SK-XP2" firstAttribute="leading" secondItem="yUi-ek-ZHj" secondAttribute="leadingMargin" constant="20" id="p6p-v2-e3v"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="cUe-SK-XP2" id="5mE-DD-1T0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W8S-3j-6kM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002.34375" y="136.5234375"/>
         </scene>
     </scenes>
 </document>
