@@ -22,8 +22,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let uuid = UUID(uuidString: "5E759524-B7F2-4F3A-81E6-73B2F9728AAB")!
-        region = CLBeaconRegion(proximityUUID: uuid, major: 1, minor: 1, identifier: "ibeacon-test.envoy.com")
+        let uuid = UUID(uuidString: "EAD09230-2176-4ABD-85A0-A54A8EB343B1")!
+        region = CLBeaconRegion(proximityUUID: uuid, major: 1, minor: 1, identifier: "manual-ibeacon-test.envoy.com")
 
         beaconData = (region.peripheralData(withMeasuredPower: nil) as NSDictionary) as! [String: Any]
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil)

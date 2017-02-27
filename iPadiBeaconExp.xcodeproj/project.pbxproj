@@ -276,7 +276,7 @@
 				DEVELOPMENT_TEAM = B35B3E8LE3;
 				INFOPLIST_FILE = iPadiBeaconExp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.envoy.iPadiBeaconExp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.envoy.iPadiBeaconExp.manual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -289,7 +289,7 @@
 				DEVELOPMENT_TEAM = B35B3E8LE3;
 				INFOPLIST_FILE = iPadiBeaconExp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.envoy.iPadiBeaconExp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.envoy.iPadiBeaconExp.manual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
