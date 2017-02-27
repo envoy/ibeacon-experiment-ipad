@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-727" y="137"/>
         </scene>
-        <!--✨ Envoy 3.0 ✨-->
+        <!--✨ Envoy 3.0 Manual Exp✨-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iPadiBeaconExp" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,7 +77,7 @@ For Envoy internal experiments only,
                             <constraint firstItem="LdL-L7-f39" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yVz-nS-4FU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="✨ Envoy 3.0 ✨" id="8pU-rK-dqb"/>
+                    <navigationItem key="navigationItem" title="✨ Envoy 3.0 Manual Exp✨" id="8pU-rK-dqb"/>
                     <connections>
                         <outlet property="activityIndicator" destination="x6k-af-63Z" id="g3h-S5-YkE"/>
                         <outlet property="signinButton" destination="LdL-L7-f39" id="w07-kG-tAh"/>
@@ -109,7 +109,7 @@ For Envoy internal experiments only,
                                         <rect key="frame" x="0.0" y="28" width="648" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bJT-83-b14" id="56s-Q6-GgJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="648" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="648" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
