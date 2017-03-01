@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var logUploadingQueue: DispatchQueue!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        UIApplication.shared.isIdleTimerDisabled = true
+
         logUploadingQueue = DispatchQueue(label: "log-uploading-queue.envoy.com", qos: .userInteractive)
 
         let osVersion = UIDevice.current.systemVersion
