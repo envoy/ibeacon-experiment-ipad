@@ -83,7 +83,7 @@ class ViewController: UIViewController {
     func registerUser() {
         let deviceModel = UIDevice.current.modelCode
         let osVersion = UIDevice.current.systemVersion
-        let userName = "ipad"
+        let userName = "ipad-exp"
         var request = URLRequest(url: Utils.apiURL.appendingPathComponent("users"))
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
